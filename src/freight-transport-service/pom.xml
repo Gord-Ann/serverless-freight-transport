@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.anna.serverless</groupId>
-    <artifactId>freight-shipment-service</artifactId>
+    <artifactId>freight-transport-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>freight-shipment-service</name>
-    <description>freight-shipment-service</description>
+    <name>freight-transport-service</name>
+    <description>freight-transport-service</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -40,6 +40,10 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.yandex.ydb</groupId>
             <artifactId>ydb-sdk-core</artifactId>
             <version>1.11.5</version>
@@ -53,6 +57,11 @@
             <groupId>com.yandex.cloud</groupId>
             <artifactId>java-sdk-functions</artifactId>
             <version>2.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>2.0.2</version>
         </dependency>
     </dependencies>
 

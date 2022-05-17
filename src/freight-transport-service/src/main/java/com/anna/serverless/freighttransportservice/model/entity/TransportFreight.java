@@ -1,8 +1,15 @@
 package com.anna.serverless.freighttransportservice.model.entity;
 
+import lombok.*;
+
 import java.util.UUID;
 
-public class TransportationFreight {
+@Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class TransportFreight {
 
     private UUID id;
     private String name;

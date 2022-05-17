@@ -1,9 +1,15 @@
-package com.anna.serverless.freighttransportservice.model.entity;
+package com.anna.serverless.freighttransportservice.model.dto.response;
 
+import com.anna.serverless.freighttransportservice.model.entity.ArrivalAddress;
+import com.anna.serverless.freighttransportservice.model.entity.Customer;
+import com.anna.serverless.freighttransportservice.model.entity.DepartureAddress;
+import com.anna.serverless.freighttransportservice.model.entity.TransportFreight;
 import com.anna.serverless.freighttransportservice.model.enumertions.Status;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.util.List;
 import java.util.UUID;
 
@@ -11,10 +17,8 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Transport {
+public class TransportResponse {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
     private Customer customer;

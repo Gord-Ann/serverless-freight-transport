@@ -5,18 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
+import java.util.UUID;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class Address {
-    @Id
-    private Long id;
+@NoArgsConstructor
+public class Customer {
 
-    private String city;
-    private String country;
+    private UUID id;
+
+    private String name;
+    private String email;
 }
