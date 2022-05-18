@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DepartureAddressMapper {
 
-    public static DepartureAddress mapToModel(DepartureAddressDto address){
+    public static DepartureAddress mapToModel(DepartureAddressDto address) {
         return DepartureAddress.builder()
                 .departureCountry(AddressMapper.mapToModel(address.getDepartureCountry()))
                 .departureCity(AddressMapper.mapToModel(address.getDepartureCity()))

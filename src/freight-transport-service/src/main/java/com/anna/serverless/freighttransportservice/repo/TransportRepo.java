@@ -9,5 +9,4 @@ import java.util.UUID;
 public interface TransportRepo extends CrudRepository<Transport, UUID> {
 
     List<Transport> findAllByCustomerId(UUID customerId);
-
 }

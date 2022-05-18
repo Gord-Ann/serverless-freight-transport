@@ -6,15 +6,14 @@ import com.anna.serverless.freighttransportservice.repo.TransportRepo;
 import lombok.AllArgsConstructor;
 
 import javax.persistence.EntityNotFoundException;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 @AllArgsConstructor
-public class StatusUpdatorFunction {
+public class StatusUpdaterFunction {
 
     private final TransportRepo transportRepo;
 
-    public void updateStatus(UUID id, StatusRequest statusRequest){
+    public void updateStatus(UUID id, StatusRequest statusRequest) {
         Transport transport = transportRepo.findById(id)
                 .orElseThrow(EntityNotFoundException::new);
         transport.setLastStatus(statusRequest.getStatus());

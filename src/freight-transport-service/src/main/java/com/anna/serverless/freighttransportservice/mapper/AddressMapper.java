@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class AddressMapper {
 
-    public static Address mapToModel(AddressDto addressDto){
+    public static Address mapToModel(AddressDto addressDto) {
         return Address.builder()
                 .city(addressDto.getCity())
                 .country(addressDto.getCountry())

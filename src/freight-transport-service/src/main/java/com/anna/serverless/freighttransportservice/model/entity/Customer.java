@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Id;
 import java.util.UUID;
 
 @Data
@@ -13,6 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Customer {
 
+    @Id
     private UUID id;
 
     private String name;

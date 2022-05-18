@@ -10,7 +10,7 @@ import java.util.UUID;
 
 public class CreateNewTransportFunction {
 
-    public TransportResponse createNewTransport(TransportRequest transportRequest){
+    public TransportResponse createNewTransport(TransportRequest transportRequest) {
         Transport transport = TransportMapper.mapToModel(transportRequest);
         transport.setLastStatus(Status.RECEIVED);
         transport.setId(UUID.randomUUID());
