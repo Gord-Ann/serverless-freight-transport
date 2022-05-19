@@ -31,19 +31,24 @@ public class TransportController {
         return listTransportFunction.listTransport(customerId);
     }
 
+    @GetMapping()
+    public String redirectToTransport(Model model) {
+        return "transport";
+    }
+
     @GetMapping("/add")
-    public String createTransportPage(Model model) {
+    public String redirectToCreateTransport(Model model) {
         return "add-transport";
     }
 
-    @PutMapping("/add")
+    @PostMapping("/add")
     public void createTransport(TransportRequest transportRequest) {
         UUID id = createNewTransportFunction.createNewTransport(transportRequest).getId();
         warehouseRestClient.validateFreights(id);
         paymentRestClient.createPayment();
     }
 
-    @PostMapping("/{id}/status")
+    @PutMapping("/{id}/status")
     public void updateStatus(@PathVariable UUID id, @RequestBody StatusRequest statusRequest) {
         statusUpdaterFunction.updateStatus(id, statusRequest);
     }

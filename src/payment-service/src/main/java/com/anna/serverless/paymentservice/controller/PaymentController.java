@@ -20,8 +20,13 @@ public class PaymentController {
     private final CreatePaymentFunction createPaymentFunction;
     private final ConfirmPaymentFunction confirmPaymentFunction;
 
+    @GetMapping
+    public String redirectToCreationPayment(){
+        return "payment-create";
+    }
+
     @PostMapping
-    public ResponseEntity<EntityModel<PaymentDto>> create(@RequestBody Payment payment,
+    public ResponseEntity<EntityModel<PaymentDto>> createPayment(@RequestBody Payment payment,
                                                           UriComponentsBuilder uriBuilder) {
         return createPaymentFunction.create(payment, uriBuilder);
     }

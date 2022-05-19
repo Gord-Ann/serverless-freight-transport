@@ -19,11 +19,11 @@ public class FreightController {
     private final ValidateFreightFunction validateFreightFunction;
 
     @GetMapping("/list")
-    public List<Freight> listFreights(UUID customer) {
+    public List<Freight> getFreights(UUID customer) {
         return listFreightsFunction.listFreights(customer);
     }
 
-    @PutMapping("/validate/{id}")
+    @PostMapping("/validate/{id}")
     public Storage validateFreight(@PathVariable UUID id) {
         return validateFreightFunction.validateFreight(id);
     }
