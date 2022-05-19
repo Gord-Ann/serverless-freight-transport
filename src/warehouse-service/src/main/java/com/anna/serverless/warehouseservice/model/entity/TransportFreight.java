@@ -1,4 +1,4 @@
-package com.anna.serverless.warehouseservice.model;
+package com.anna.serverless.warehouseservice.model.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,13 +13,13 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Storage {
+public class TransportFreight {
 
     @Id
     private UUID id;
 
-    private String name;
-
     @ManyToOne
-    private Customer customer;
+    private Freight freight;
+
+    private Double quantity;
 }

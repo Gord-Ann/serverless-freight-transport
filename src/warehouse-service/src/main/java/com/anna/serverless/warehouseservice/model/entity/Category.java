@@ -1,8 +1,6 @@
-package com.anna.serverless.warehouseservice.model;
+package com.anna.serverless.warehouseservice.model.entity;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,9 +9,13 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class Category {
 
     @Id
     private UUID id;
+
+    private String name;
 }

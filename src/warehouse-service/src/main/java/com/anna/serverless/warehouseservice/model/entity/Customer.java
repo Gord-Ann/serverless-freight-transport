@@ -1,4 +1,4 @@
-package com.anna.serverless.warehouseservice.model;
+package com.anna.serverless.warehouseservice.model.entity;
 
 import lombok.Getter;
 import lombok.Setter;

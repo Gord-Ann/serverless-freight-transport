@@ -1,6 +1,6 @@
 package com.anna.serverless.warehouseservice.functions;
 
-import com.anna.serverless.warehouseservice.model.Freight;
+import com.anna.serverless.warehouseservice.model.entity.Freight;
 import com.anna.serverless.warehouseservice.repo.FreightRepo;
 import com.anna.serverless.warehouseservice.repo.StorageRepo;
 import lombok.AllArgsConstructor;

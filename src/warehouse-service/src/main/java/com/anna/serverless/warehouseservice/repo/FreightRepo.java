@@ -1,6 +1,6 @@
 package com.anna.serverless.warehouseservice.repo;
 
-import com.anna.serverless.warehouseservice.model.Freight;
+import com.anna.serverless.warehouseservice.model.entity.Freight;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

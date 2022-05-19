@@ -1,7 +1,9 @@
 package com.anna.serverless.warehouseservice.controller;
 
 import com.anna.serverless.warehouseservice.functions.ListFreightsFunction;
-import com.anna.serverless.warehouseservice.model.Freight;
+import com.anna.serverless.warehouseservice.functions.ValidateFreightFunction;
+import com.anna.serverless.warehouseservice.model.entity.Freight;
+import com.anna.serverless.warehouseservice.model.entity.Storage;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +16,7 @@ import java.util.UUID;
 public class FreightController {
 
     private final ListFreightsFunction listFreightsFunction;
+    private final ValidateFreightFunction validateFreightFunction;
 
     @GetMapping("/list")
     public List<Freight> listFreights(UUID customer) {
@@ -21,7 +24,7 @@ public class FreightController {
     }
 
     @PutMapping("/validate/{id}")
-    public void validateFreight(@PathVariable UUID id) {
-
+    public Storage validateFreight(@PathVariable UUID id) {
+        return validateFreightFunction.validateFreight(id);
     }
 }
