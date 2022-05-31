@@ -45,7 +45,6 @@ public class TransportController {
     public void createTransport(TransportRequest transportRequest) {
         UUID id = createNewTransportFunction.createNewTransport(transportRequest).getId();
         warehouseRestClient.validateFreights(id);
-        paymentRestClient.createPayment();
     }
 
     @PutMapping("/{id}/status")

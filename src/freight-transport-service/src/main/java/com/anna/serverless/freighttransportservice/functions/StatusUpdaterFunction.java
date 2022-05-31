@@ -4,10 +4,12 @@ import com.anna.serverless.freighttransportservice.model.dto.request.StatusReque
 import com.anna.serverless.freighttransportservice.model.entity.Transport;
 import com.anna.serverless.freighttransportservice.repo.TransportRepo;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.UUID;
 
+@Component
 @AllArgsConstructor
 public class StatusUpdaterFunction {
 
