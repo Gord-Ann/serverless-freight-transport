@@ -3,7 +3,6 @@ package com.anna.serverless.freighttransportservice.controller;
 import com.anna.serverless.freighttransportservice.functions.CreateNewTransportFunction;
 import com.anna.serverless.freighttransportservice.functions.ListTransportFunction;
 import com.anna.serverless.freighttransportservice.functions.StatusUpdaterFunction;
-import com.anna.serverless.freighttransportservice.integration.PaymentRestClient;
 import com.anna.serverless.freighttransportservice.integration.WarehouseRestClient;
 import com.anna.serverless.freighttransportservice.model.dto.request.StatusRequest;
 import com.anna.serverless.freighttransportservice.model.dto.request.TransportRequest;
@@ -24,7 +23,6 @@ public class TransportController {
     private final CreateNewTransportFunction createNewTransportFunction;
     private final StatusUpdaterFunction statusUpdaterFunction;
     private final WarehouseRestClient warehouseRestClient;
-    private final PaymentRestClient paymentRestClient;
 
     @GetMapping("/list/{customerId}")
     public List<Transport> getTransport(@PathVariable UUID customerId) {
